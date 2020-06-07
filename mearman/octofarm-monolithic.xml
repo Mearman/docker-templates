@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+	<Date>2020-06-07</Date>
+	<Beta>False</Beta>
+	<Category>Tools:Utilities</Category>
+	<Name>octofarm-monolithic</Name>
+	<Project>https://github.com/Mearman/OctoFarm/tree/monolithic-docker/master</Project>
+	<Icon>https://github.com/NotExpectedYet/OctoFarm/raw/master/views/android-chrome-512x512.png</Icon>
+	<Changes>
+	</Changes>
+	<Overview>
+			Based on the OctoFarm Dockerfile that usees a NodeJS debian base imagine bug also includes a built-in self-contained MongoDB instance.
+	</Overview>
+	<Description>
+			OctoFarm is an easy to setup and install web server and client for unifying multiple instances of Octoprint. You can manage and monitor as many instances as you want from a single interface giving you full control over your 3D printer farm.
+	</Description>
+	<Registry>https://hub.docker.com/r/mearman/octofarm-monolithic</Registry>
+	<GitHub>https://github.com/Mearman/OctoFarm/tree/monolithic-docker/master</GitHub>
+	<Repository>mearman/octofarm-monolithic</Repository>
+	<TemplateURL>https://raw.githubusercontent.com/mearman/docker-templates/master/mearman/octofarm-monolithic.xml</TemplateURL>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>4000</HostPort>
+				<ContainerPort>4000</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/appdata/octofarm-mono/db</HostDir>
+			<ContainerDir>/data/db</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/octofarm-mono/config</HostDir>
+			<ContainerDir>/data/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/octofarm-mono/logs</HostDir>
+			<ContainerDir>/data/logs</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<ExtraParams></ExtraParams>
+</Containers>
