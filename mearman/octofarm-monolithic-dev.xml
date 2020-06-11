@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Containers>
+<Container>
 	<Date>2020-06-07</Date>
 	<Beta>False</Beta>
-	<Category>Tools:Utilities</Category>
+	<Category>Tools:Utilities Status:Beta</Category>
 	<Name>octofarm-monolithic-dev</Name>
 	<Project>https://github.com/NotExpectedYet/OctoFarm</Project>
 	<Icon>https://github.com/NotExpectedYet/OctoFarm/raw/master/views/android-chrome-512x512.png</Icon>
@@ -49,4 +49,4 @@
 	</Data>
 	<WebUI>http://[IP]:[PORT:4000]</WebUI>
 	<ExtraParams></ExtraParams>
-</Containers>
+</Container>
