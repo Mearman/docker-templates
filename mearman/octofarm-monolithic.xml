@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Containers>
-	<Date>2020-06-07</Date>
+<Container>
+	<Date>2020-06-11</Date>
 	<Beta>False</Beta>
-	<Category>Tools:Utilities</Category>
-	<Name>octofarm-monolithic</Name>
-	<Project>https://github.com/Mearman/OctoFarm/tree/monolithic-docker/master</Project>
+	<Category>Tools:Utilities Status:Stable</Category>
+	<Name>OctoFarm-Monolithic</Name>
+	<Project>https://github.com/NotExpectedYet/OctoFarm</Project>
 	<Icon>https://github.com/NotExpectedYet/OctoFarm/raw/master/views/android-chrome-512x512.png</Icon>
 	<Changes>
 	</Changes>
@@ -14,10 +14,10 @@
 	<Description>
 			OctoFarm is an easy to setup and install web server and client for unifying multiple instances of Octoprint. You can manage and monitor as many instances as you want from a single interface giving you full control over your 3D printer farm.
 	</Description>
-	<Registry>https://hub.docker.com/r/mearman/octofarm-monolithic</Registry>
-	<GitHub>https://github.com/Mearman/OctoFarm/tree/monolithic-docker/master</GitHub>
-	<Repository>mearman/octofarm-monolithic</Repository>
-	<TemplateURL>https://raw.githubusercontent.com/mearman/docker-templates/master/mearman/octofarm-monolithic.xml</TemplateURL>
+	<Registry>https://hub.docker.com/r/octofarm/octofarm</Registry>
+	<GitHub>https://github.com/NotExpectedYet/OctoFarm</GitHub>
+	<Repository>octofarm/octofarm</Repository>
+	<TemplateURL>https://raw.githubusercontent.com/mearman/docker-templates/master/mearman/octofarm-monolithic-dev.xml</TemplateURL>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
 	<Networking>
@@ -47,5 +47,6 @@
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
+	<WebUI>http://[IP]:[PORT:4000]</WebUI>
 	<ExtraParams></ExtraParams>
-</Containers>
+</Container>
