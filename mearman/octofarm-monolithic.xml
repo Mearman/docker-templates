@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-	<Date>2020-06-11</Date>
-	<Beta>False</Beta>
-	<Category>Tools:Utilities Status:Stable</Category>
-	<Name>OctoFarm-Monolithic</Name>
+	<Date>2020-06-12</Date>
+	<Category>Tools:Utilities</Category>
+	<Name>octofarm-monolithic</Name>
 	<Project>https://github.com/NotExpectedYet/OctoFarm</Project>
 	<Icon>https://github.com/NotExpectedYet/OctoFarm/raw/master/views/android-chrome-512x512.png</Icon>
 	<Changes>
 	</Changes>
 	<Overview>
-			Based on the OctoFarm Dockerfile that usees a NodeJS debian base imagine bug also includes a built-in self-contained MongoDB instance.
+			OctoFarm is an web server and client combination for unifying multiple instances of Octoprint. This image also includes a built-in self-contained MongoDB instance.
 	</Overview>
 	<Description>
 			OctoFarm is an easy to setup and install web server and client for unifying multiple instances of Octoprint. You can manage and monitor as many instances as you want from a single interface giving you full control over your 3D printer farm.
@@ -17,6 +16,14 @@
 	<Registry>https://hub.docker.com/r/octofarm/octofarm</Registry>
 	<GitHub>https://github.com/NotExpectedYet/OctoFarm</GitHub>
 	<Repository>octofarm/octofarm</Repository>
+	<Branch>
+		<Tag>monolithic-latest</Tag>
+		<TagDescription>Latest stable release of OctoFarm, including a built-in MongoDB instance.</TagDescription>
+	</Branch>
+	<Branch>
+		<Tag>monolithic-dev</Tag>
+		<TagDescription>Latest beta release of OctoFarm, including a built-in MongoDB instance. Use with caution!</TagDescription>
+	</Branch>
 	<TemplateURL>https://raw.githubusercontent.com/mearman/docker-templates/master/mearman/octofarm-monolithic-dev.xml</TemplateURL>
 	<BindTime>true</BindTime>
 	<Privileged>false</Privileged>
@@ -44,6 +51,11 @@
 		<Volume>
 			<HostDir>/mnt/user/appdata/octofarm-mono/logs</HostDir>
 			<ContainerDir>/data/logs</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/octofarm-mono/scripts</HostDir>
+			<ContainerDir>/scripts</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
